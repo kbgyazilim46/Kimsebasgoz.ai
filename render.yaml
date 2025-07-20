@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: your-ai-app
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: HF_TOKEN
+        fromSecret: HF_TOKEN_SECRET
